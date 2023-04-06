@@ -15,7 +15,7 @@ def get_student_detail(student_id):
     select_query = """SELECT * FROM Students JOIN School ON Students.School_Id = School.School_Id WHERE Student_Id = ?"""
     cursor.execute(select_query,(student_id,))
     records = cursor.fetchall()
-    print ("Данные по учителям")
+    print ("Данные по студентам")
     for row in records:
       print ("ID студента: ", row[0])
       print ("Имя студента: ", row[1])
